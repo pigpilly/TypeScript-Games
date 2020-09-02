@@ -37,7 +37,9 @@ function startGame() {
   });
 
   //Calling hover effect
-  setBoradHoverClass();
+  if (navigator.maxTouchPoints === 0) {
+    setBoradHoverClass();
+  }
   //Hiding the Restart button
   winningMessage?.classList.remove("show");
 }
@@ -59,7 +61,10 @@ function handleClick(e: any) {
   } else {
     //Swapping turn & hover effect
     swapTurn();
-    setBoradHoverClass();
+
+    if (navigator.maxTouchPoints === 0) {
+      setBoradHoverClass();
+    }
   }
 }
 

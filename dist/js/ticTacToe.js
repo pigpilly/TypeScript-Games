@@ -32,7 +32,9 @@ function startGame() {
         cell.addEventListener("click", handleClick, { once: true });
     });
     //Calling hover effect
-    setBoradHoverClass();
+    if (navigator.maxTouchPoints === 0) {
+        setBoradHoverClass();
+    }
     //Hiding the Restart button
     winningMessage?.classList.remove("show");
 }
@@ -53,7 +55,9 @@ function handleClick(e) {
     else {
         //Swapping turn & hover effect
         swapTurn();
-        setBoradHoverClass();
+        if (navigator.maxTouchPoints === 0) {
+            setBoradHoverClass();
+        }
     }
 }
 //Marking the boxes after click
