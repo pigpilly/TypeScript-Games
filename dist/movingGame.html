@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moving Game</title>
+
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        background-color: black;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      canvas {
+        border: 1px solid gray;
+        border-radius: 0.25em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="color: aliceblue">Reach to Goal</h1>
+    <p></p>
+    <canvas id="canvas" width="640px" height="360px"></canvas>
+
+    <script src="./js/movingGame.js"></script>
+  </body>
+</html>
